@@ -103,7 +103,8 @@ const GoogleSheet = function (sheetId, sheetName) {
                     radar.addQuadrant(quadrant)
                 });
 
-                var size = (window.innerHeight - 133) < 620 ? 620 : window.innerHeight - 133;
+                // var size = (window.innerHeight - 133) < 620 ? 620 : window.innerHeight - 133;
+                var size = 600;
 
                 new GraphingRadar(size, radar).init().plot();
 
@@ -167,12 +168,12 @@ const GoogleSheetInput = function () {
 
             set_document_title();
 
-            plotLogo(content);
+            // plotLogo(content);
 
             var bannerText = '<h1>Build your own radar</h1><p>Once you\'ve <a href ="https://info.thoughtworks.com/visualize-your-tech-strategy.html">created your Radar</a>, you can use this service' +
                 ' to generate an <br />interactive version of your Technology Radar. Not sure how? <a href ="https://info.thoughtworks.com/visualize-your-tech-strategy-guide.html">Read this first.</a></p>';
 
-            plotBanner(content, bannerText);
+            // plotBanner(content, bannerText);
 
             plotForm(content);
 

@@ -268,7 +268,7 @@ const Radar = function (size, radar) {
   function createHomeLink(pageElement) {
     if (pageElement.select('.home-link').empty()) {
       pageElement.append('div')
-        .html('&#171; Back to Radar home')
+        .html('&#171; Back')
         .classed('home-link', true)
         .classed('selected', true)
         .on('click', redrawFullRadar)
@@ -421,10 +421,7 @@ const Radar = function (size, radar) {
       .append('div')
       .attr('class', 'footer-content')
       .append('p')
-      .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. '
-      + 'By using this service you agree to <a href="https://info.thoughtworks.com/visualize-your-tech-strategy-terms-of-service.html">ThoughtWorks\' terms of use</a>. '
-      + 'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. '
-      + 'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.');
+      .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. ');
   }
 
   function mouseoverQuadrant(order) {
@@ -503,7 +500,8 @@ const Radar = function (size, radar) {
 
     rings = radar.rings();
     quadrants = radar.quadrants();
-    var header = plotRadarHeader();
+    // var header = plotRadarHeader();
+    var header = d3.select('body').insert('header', "#radar");
 
     plotQuadrantButtons(quadrants, header);
 
