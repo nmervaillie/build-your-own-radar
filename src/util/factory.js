@@ -104,7 +104,7 @@ const GoogleSheet = function (sheetId, sheetName) {
                 });
 
                 // var size = (window.innerHeight - 133) < 620 ? 620 : window.innerHeight - 133;
-                var size = 600;
+                var size = 500;
 
                 new GraphingRadar(size, radar).init().plot();
 
